@@ -40,6 +40,7 @@ public class UsersSteps {
                 Assert.assertEquals(usersPage.usersList.get(i).get(1).getText().trim(),dataTable.get(i).get(0));
                 Assert.assertEquals(usersPage.usersList.get(i).get(4).getText().trim(),dataTable.get(i).get(1));
         }
+        System.out.println("armi");
 
 
     }
