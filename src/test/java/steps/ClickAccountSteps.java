@@ -28,6 +28,7 @@ public class ClickAccountSteps {
         homePage.login.click();
         Thread.sleep(2000);
         homePage.clickAccount();
+        Thread.sleep(2000);
     }
     @When("user clicks on create account button")
     public void user_clicks_on_create_account_button() {
