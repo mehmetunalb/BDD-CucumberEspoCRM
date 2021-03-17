@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.HomePage;
 import utils.ConfigReader;
 import utils.Driver;
@@ -29,10 +30,14 @@ public class MainPageSteps {
     }
     @Then("user verifies function names")
     public void user_verifies_function_names(List<String> categories) {
+        System.out.println(categories.size());
+        System.out.println(homePage.category.size());
 
-        Assert.assertTrue(categories.size()==homePage.category.size());
+        for (WebElement el:homePage.category) {
+            System.out.println(el.getText());
+        }
 
-        for (int i =0; i <categories.size() ; i++) {
+        for (int i =1; i <=7 ; i++) {
             Assert.assertEquals(categories.get(i),homePage.category.get(i).getText().trim());
            // Assert.assertTrue(homePage.category.get(i).getText().contains(categories.get(i)));
 
