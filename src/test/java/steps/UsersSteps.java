@@ -37,6 +37,7 @@ public class UsersSteps {
         usersPage=new UsersPage(driver);
         for (int i=0; i<usersPage.usersList.size(); i++) { // 11
                 int k=0;
+            System.out.println(usersPage);
                 Assert.assertEquals(usersPage.usersList.get(i).get(1).getText().trim(),dataTable.get(i).get(0));
                 Assert.assertEquals(usersPage.usersList.get(i).get(4).getText().trim(),dataTable.get(i).get(1));
         }
