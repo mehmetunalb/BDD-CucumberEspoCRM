@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.Driver;
 
 import java.util.List;
 
@@ -31,14 +30,18 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='#User']")
     public WebElement usersButton;
 
-    public void goToUsersPage(){
+
+    public void goToUsersPage() throws InterruptedException {
         threeDots.click();
+        Thread.sleep(1000);
         usersButton.click();
     }
 
     public void clickAccount(){
         accountsButton.click();
     }
+
+
 
 
 }

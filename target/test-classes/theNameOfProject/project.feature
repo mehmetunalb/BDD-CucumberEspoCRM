@@ -27,7 +27,7 @@ Feature: Data Table Practice
     Then user verifies his, her info "<Name>", "<Website>","<Country>","<Type>"
     Examples:
       | Name     | Website                   | Country | Type     |
-      | Armagann  | www.amazon.com           | Turkey  | Reseller |
+      | Armagan  | www.amazon.com           | Turkey  | Reseller |
   #    | Serhat   | www.techtorialacademy.com | Germany | Customer |
   #    | Mehmet   | www.ebay.com              | Nigeria | Customer |
   #    | AyhanAbi | www.buybuybaby.com        | Syria   | Customer |
@@ -44,12 +44,6 @@ Feature: Data Table Practice
       | Gabliel Brie    | gabrielbrie@exmpl.org.pi            |
       | Jake Forester   | jake_forester@example-espo.demo.com |
       | Jim Williams    | jim_williams@example.com.ca         |
-      | Rebecca Maer    | rebecca.maer@demoexmpl.org          |
+      | Rebecca Maer    | rebecca.maer@demo_exmpl.org          |
       | Richard Pan     | richard_pan@read.exmpl-dd.com       |
-      | ThomasList Peterson | thomas.peterson@demo-user.exmpl.com |
-
-
-
-
-
-
+      | Thomas Peterson | thomas.peterson@demo-user.exmpl.com |

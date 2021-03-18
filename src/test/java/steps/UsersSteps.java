@@ -30,19 +30,24 @@ public class UsersSteps {
         Thread.sleep(2000);
         homePage.goToUsersPage();
         Thread.sleep(2000);
-
     }
     @Then("user verifies usernames and emails")
-    public void user_verifies_usernames_and_emails(List<List<WebElement>> dataTable) {
+    public void user_verifies_usernames_and_emails(List<List<String>> dataTable) {
         usersPage=new UsersPage(driver);
-        for (int i=0; i<usersPage.usersList.size(); i++) { // 11
-                int k=0;
-                Assert.assertEquals(usersPage.usersList.get(i).get(1).getText().trim(),dataTable.get(i).get(0));
-                Assert.assertEquals(usersPage.usersList.get(i).get(4).getText().trim(),dataTable.get(i).get(1));
-        }
-        System.out.println("armi");
+        List<List<WebElement>> usersList;
+        usersList=usersPage.getUsersList();
 
+        /*for (int i=0; i<usersList.size();i++) { //11
+            System.out.println(usersList.get(i).get(4).getText().trim());
+            System.out.println(dataTable.get(i).get(1));
+        }*/
+
+        for (int i=0; i<usersList.size(); i++) { // 11
+            Assert.assertEquals(usersList.get(i).get(1).getText().trim(),dataTable.get(i).get(0));
+            Assert.assertEquals(usersList.get(i).get(4).getText().trim(),dataTable.get(i).get(1));
+        }
 
     }
+
 
 }
