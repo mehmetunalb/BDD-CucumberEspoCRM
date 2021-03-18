@@ -39,6 +39,8 @@ public class HomePage {
 
     public void clickAccount(){
         accountsButton.click();
+        System.out.println("ayhan");
+
     }
 
 
